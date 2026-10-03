@@ -1,0 +1,4 @@
+sap-ai-sdk-gen[all]
+requests
+python-dotenv
+pydantic
