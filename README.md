@@ -21,7 +21,7 @@ A sales user asks plain-language questions about a customer (open orders, blocks
 
 **The real data changed the design.** Exploring the S/4HANA Cloud sandbox ([output](docs/step0_output.txt)) showed every sampled sales order in a single sales organization, so scoping access by sales organization would test nothing. Access is scoped by **account portfolio** instead: each sales rep owns a set of customers, which is also closer to how account teams work. The data also showed billing blocks on many orders and delivery blocks on only two, so the approval-gated action is **release of a delivery block**.
 
-**Models guess at SAP codes with full confidence.** In SAP generative AI hub, two models were asked what two S/4 block codes mean. Both answered as fact, they disagreed on one code, and one invented transaction codes. Block codes are system configuration, so neither could know. This drives the "codes come from the system" principle and a new evaluation category. [Full write-up](docs/model-comparison-block-codes.md)
+**Models guess at SAP codes with full confidence.** In SAP generative AI hub, two models were asked what two S/4 block codes mean. Both answered as fact, they disagreed on one code, and one invented transaction codes. Block codes are system configuration, so neither could know. A follow-up in the orchestration service showed that a system instruction turns guessing into refusal, but a smaller model kept inventing configuration transactions the instruction didn't mention. Instructions reduce risk; only grounding gives the right answer. This drives the "codes come from the system" principle and a new evaluation category. [Full write-up](docs/model-comparison-block-codes.md)
 
 ## Progress
 
