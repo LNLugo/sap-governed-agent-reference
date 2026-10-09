@@ -30,10 +30,10 @@ A sales user asks plain-language questions about a customer (open orders, blocks
 - [x] Sandbox access and data exploration (`explore_sandbox.py`)
 - [x] Typed Business Partner tool (`sap_tools.py`)
 - [x] Model behavior test on S/4 codes in SAP generative AI hub ([write-up](docs/model-comparison-block-codes.md))
-- [ ] Model access through SAP AI Core, Orchestration Service V2 (`hello_orchestration.py`)
-- [ ] Thin slice: one tool, one grounded answer, one trace (`thin_slice.py`)
-- [ ] Sales order and billing tools
-- [ ] Role-based scope enforcement
+- [ ] Model access through SAP AI Core, Orchestration Service V2 (`hello_orchestration.py`): waiting on AI Core credentials
+- [ ] Thin slice: one tool, one grounded answer, one trace (`thin_slice.py`): waiting on AI Core credentials
+- [x] Sales order and billing tools (`sap_tools.py`)
+- [x] Role-based scope enforcement (`authz.py`, `step4_check.py`)
 - [ ] Approval queue and audited write-back
 - [ ] Evaluation harness and results
 - [ ] Architecture decisions, production notes and lessons learned

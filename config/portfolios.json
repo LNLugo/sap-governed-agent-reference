@@ -1,0 +1,17 @@
+{
+  "_comment": "Simulated identities for the sandbox. In a real tenant, the user comes from an XSUAA token and the customer list from the customer master (for example the employee-responsible partner function). 17100001 is deliberately unassigned: only the approver may see it.",
+  "users": {
+    "rep_a": {
+      "role": "sales_rep",
+      "customers": ["USCU-CUS24", "USCU-CUS02"]
+    },
+    "rep_b": {
+      "role": "sales_rep",
+      "customers": ["USCU-CUS21", "USCU-CUS01"]
+    },
+    "approver": {
+      "role": "order_approver",
+      "customers": "*"
+    }
+  }
+}
